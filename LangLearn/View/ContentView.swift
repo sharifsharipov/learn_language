@@ -1,21 +1,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedTab: Int = 1
     var body: some View {
-        TabView {
-            ListView().padding(.horizontal,15)
+        TabView(selection: $selectedTab) {
+            ListView()
                 .tag(1)
                 .tabItem {
                     Image(systemName: "list.dash")
                     Text("List")
                 }
-            Text("Words")
+            RandomWorlView()
                 .tag(2)
                 .tabItem {
                     Image(systemName: "textformat.abc")
                     Text("Words")
                 }
-            Text("Links")
+            LinksView()
                 .tag(3)
                 .tabItem {
                     Image(systemName: "link")
