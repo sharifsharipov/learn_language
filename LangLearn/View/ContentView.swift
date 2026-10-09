@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            ListView()
+            ListView().padding(.horizontal,15)
                 .tag(1)
                 .tabItem {
                     Image(systemName: "list.dash")

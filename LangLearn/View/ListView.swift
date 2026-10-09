@@ -31,8 +31,14 @@ struct ListView: View {
             Button {
                 // action
             } label: {
-                Image(systemName: "plus")
-            }
+                ZStack{
+                    Circle().frame(width: 60, height: 60).foregroundColor(.green)
+                    Image(systemName: "plus").resizable().frame(
+                        width: 20,
+                        height: 20,
+                    ).foregroundColor(.white)
+                }
+            }.offset(x: -20, y: -30)
         }
     }
 }
